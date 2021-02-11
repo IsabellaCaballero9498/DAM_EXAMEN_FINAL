@@ -7,21 +7,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class Datos_Mapa extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_datos__mapa);
         Button btnLogin;
         btnLogin = findViewById(R.id.buttonLogin);
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, Datos_Mapa.class);
+                //cambiar el 2do datos_mapa por el nombre de tu maps Activity
+                Intent i = new Intent(Datos_Mapa.this, Datos_Mapa.class);
                 startActivity(i);
             }
         });
     }
-
 }
