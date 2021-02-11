@@ -34,18 +34,19 @@ public class MAPS_ACTIVITY extends FragmentActivity implements OnMapReadyCallbac
      * it inside the SupportMapFragment. This method will only be triggered once the user has
      * installed Google Play services and returned to the app.
      */
+    Double latitud;
+    Double longitud;
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        //Integer latitud = Integer.parseInt(findViewById(R.id.txtLatitud).toString());
-        //Integer longitud = Integer.parseInt(findViewById(R.id.txtLongitud).toString());
-        //String latitud =  findViewById(R.id.txtLatitud.getText().toString());
+        //latitud = Double.parseDouble(findViewById(R.id.txtLatitud).toString());
+        //longitud = Double.parseDouble(findViewById(R.id.txtLongitud).toString());
+        //String latitud =  findViewById(R.id.txtMarcador).toString();
         // Add a marker in Sydney and move the camera
         LatLng sydney = new LatLng(-12.213973688079841, -76.93289762891045);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("TITULO"));
+        mMap.addMarker(new MarkerOptions().position(sydney).title("Holis"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
-        mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
     }
 }
